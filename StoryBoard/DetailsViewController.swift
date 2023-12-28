@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class DetailsViewController: UIViewController {
     
@@ -29,7 +30,46 @@ class DetailsViewController: UIViewController {
 
     //methods
     func isSuspect() -> Bool {
-        return true
+        var mBoolean=false
+        
+        let appDelegate=UIApplication.shared.delegate as! AppDelegate
+        let persistentContainer=appDelegate.persistentContainer
+        let managedContext=persistentContainer.viewContext
+        
+        let request=NSFetchRequest<NSManagedObject>(entityName: "Player")
+        let predicate=NSPredicate(format: "name = %@", playerName!)
+        request.predicate=predicate
+        
+        do{
+           let result = try managedContext.fetch(request)
+            if result.count>0{
+                mBoolean=true
+            }
+
+        }catch{
+            print("suspect fetching error")
+        }
+        
+        return mBoolean
+    }
+    
+    //core data
+    
+    func addPlayer() {
+        let appDelegate=UIApplication.shared.delegate as! AppDelegate
+        let persistentContainer=appDelegate.persistentContainer
+        let managedContext=persistentContainer.viewContext
+        
+        let entityDescription=NSEntityDescription.entity(forEntityName: "Player", in: managedContext)
+        let object=NSManagedObject(entity: entityDescription!, insertInto: managedContext)
+        object.setValue(playerName, forKey: "name")
+        object.setValue(playerColor, forKey: "color")
+        
+        do{
+            try managedContext.save()
+        }catch{
+            print("suspect adding error")
+        }
     }
     
     func showAlert(title:String,message:String) {
@@ -43,9 +83,9 @@ class DetailsViewController: UIViewController {
     
     @IBAction func suspect(_ sender: Any) {
         
-        if(isSuspect()){
+        if(!isSuspect()){
             
-            
+            addPlayer()
             
         }else{
             self.showAlert(title: "Warning", message: "Player already marked as suspect")
