@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  SuspectViewController.swift
 //  StoryBoard
 //
 //  Created by Zeddin Dhia on 28/12/2023.
@@ -7,10 +7,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
-    
-    //var
-    var avatarName:String?
+class SuspectViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

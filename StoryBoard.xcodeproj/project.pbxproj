@@ -16,6 +16,7 @@
 		7E9F20D92B3DD75200682A0E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E9F20D72B3DD75200682A0E /* LaunchScreen.storyboard */; };
 		7E9F20E12B3DED6400682A0E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9F20E02B3DED6400682A0E /* HomeViewController.swift */; };
 		7E9F20E32B3DED7400682A0E /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9F20E22B3DED7400682A0E /* DetailsViewController.swift */; };
+		7E9F20E52B3DEF7200682A0E /* SuspectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9F20E42B3DEF7200682A0E /* SuspectViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		7E9F20DA2B3DD75200682A0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E9F20E02B3DED6400682A0E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		7E9F20E22B3DED7400682A0E /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		7E9F20E42B3DEF7200682A0E /* SuspectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuspectViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 		7E9F20C82B3DD75100682A0E /* StoryBoard */ = {
 			isa = PBXGroup;
 			children = (
+				7E9F20E42B3DEF7200682A0E /* SuspectViewController.swift */,
 				7E9F20C92B3DD75100682A0E /* AppDelegate.swift */,
 				7E9F20CB2B3DD75100682A0E /* SceneDelegate.swift */,
 				7E9F20CD2B3DD75100682A0E /* ViewController.swift */,
@@ -148,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E9F20E12B3DED6400682A0E /* HomeViewController.swift in Sources */,
+				7E9F20E52B3DEF7200682A0E /* SuspectViewController.swift in Sources */,
 				7E9F20D42B3DD75100682A0E /* StoryBoard.xcdatamodeld in Sources */,
 				7E9F20CE2B3DD75100682A0E /* ViewController.swift in Sources */,
 				7E9F20CA2B3DD75100682A0E /* AppDelegate.swift in Sources */,

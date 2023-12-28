@@ -17,19 +17,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SlS-DE-TUs">
-                                <rect key="frame" x="36" y="103" width="331" height="279"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Red" translatesAutoresizingMaskIntoConstraints="NO" id="SlS-DE-TUs">
+                                <rect key="frame" x="36" y="103" width="331" height="330"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Custom your avatar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LMM-vx-19R">
-                                <rect key="frame" x="36" y="400" width="331" height="51"/>
+                                <rect key="frame" x="36" y="460" width="331" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Choose Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fDZ-Tj-nSt">
-                                <rect key="frame" x="36" y="498" width="331" height="34"/>
+                                <rect key="frame" x="36" y="529" width="331" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -51,6 +51,9 @@
                                     </backgroundConfiguration>
                                     <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="startAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l42-eb-WLu"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LbW-qc-5v6">
                                 <rect key="frame" x="45" y="651" width="30" height="30"/>
@@ -61,6 +64,9 @@
                                         <color key="backgroundColor" systemColor="systemRedColor"/>
                                     </backgroundConfiguration>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="redBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dgj-28-2aC"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wyC-vv-dRT">
                                 <rect key="frame" x="89" y="651" width="30" height="30"/>
@@ -71,6 +77,9 @@
                                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                                     </backgroundConfiguration>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="yellowBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e6K-ws-OEH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t1X-9z-R8z">
                                 <rect key="frame" x="187" y="651" width="30" height="30"/>
@@ -81,6 +90,9 @@
                                         <color key="backgroundColor" systemColor="systemMintColor"/>
                                     </backgroundConfiguration>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="lightBlueBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y0H-sv-4Aa"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7S-6L-aJH">
                                 <rect key="frame" x="237" y="651" width="30" height="30"/>
@@ -91,6 +103,9 @@
                                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                     </backgroundConfiguration>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="orangeBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="01F-oJ-FWq"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j0o-gw-LN6">
                                 <rect key="frame" x="286" y="651" width="30" height="30"/>
@@ -101,6 +116,9 @@
                                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
                                     </backgroundConfiguration>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="purpleBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cW9-lV-uLZ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Bq-wS-s3p">
                                 <rect key="frame" x="337" y="651" width="30" height="30"/>
@@ -108,9 +126,12 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
                                     <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                        <color key="backgroundColor" red="0.91976243257522583" green="0.18272025987399329" blue="0.91439602856656554" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </backgroundConfiguration>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="pinkBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k8y-54-Een"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Yu-lo-vLv">
                                 <rect key="frame" x="138" y="651" width="30" height="30"/>
@@ -121,6 +142,9 @@
                                         <color key="backgroundColor" systemColor="systemBrownColor"/>
                                     </backgroundConfiguration>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="brownBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nsC-vq-U1B"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -128,6 +152,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="En9-4P-Km0"/>
                     <connections>
+                        <outlet property="avatarImageV" destination="SlS-DE-TUs" id="1E6-6X-86a"/>
+                        <outlet property="userNameTf" destination="fDZ-Tj-nSt" id="rVH-E7-0N8"/>
                         <segue destination="lh8-ku-jPz" kind="show" identifier="firstSegue" id="X9E-AZ-yMi"/>
                     </connections>
                 </viewController>
@@ -205,7 +231,7 @@
                     </navigationItem>
                     <connections>
                         <segue destination="NwC-cN-1XM" kind="show" identifier="secondSegue" id="lUw-1u-elO"/>
-                        <segue destination="HAf-Ui-lOp" kind="show" id="yAo-kh-oNk"/>
+                        <segue destination="HAf-Ui-lOp" kind="show" identifier="thirdSegue" id="yAo-kh-oNk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cTx-3L-POm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -334,6 +360,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Red" width="600" height="600"/>
         <image name="exclamationmark.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -355,9 +382,6 @@
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
