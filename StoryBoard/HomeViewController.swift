@@ -52,6 +52,38 @@ class HomeViewController: UIViewController ,UITableViewDelegate, UITableViewData
         performSegue(withIdentifier: "secondSegue", sender: indexPath)
     }
     
+    // this method handles row deletion
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+
+        if editingStyle == .delete {
+
+          
+                players.remove(at: indexPath.row)
+                playerrsColors.remove(at: indexPath.row)
+
+                // Delete the table view row
+                tableView.deleteRows(at: [indexPath], with: .fade)
+          
+
+         }
+     }
+    
+   /* func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+
+        // action one
+        let editAction = UITableViewRowAction(style: .default, title: "Edit", handler: { (action, indexPath) in
+            print("Edit tapped")
+        })
+        editAction.backgroundColor = UIColor.blue
+
+        // action two
+        let deleteAction = UITableViewRowAction(style: .default, title: "Delete", handler: { (action, indexPath) in
+            print("Delete tapped")
+        })
+        deleteAction.backgroundColor = UIColor.red
+
+        return [editAction, deleteAction]
+    }*/
     
     //life cycle
     override func viewDidLoad() {

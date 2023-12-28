@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 
-class SuspectViewController: UIViewController ,UICollectionViewDataSource{
+class SuspectViewController: UIViewController ,UICollectionViewDataSource,UICollectionViewDelegate{
 
     
     
@@ -44,11 +44,34 @@ class SuspectViewController: UIViewController ,UICollectionViewDataSource{
         return cell
     }
     
+    //cell select
     
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+          let selectedSuspect = suspects[indexPath.row]
+
+          let confirmationAlert = UIAlertController(title: "Delete Suspect", message: "Are you sure you want to delete \(selectedSuspect)?", preferredStyle: .alert)
+
+          confirmationAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+
+          confirmationAlert.addAction(UIAlertAction(title: "OK", style: .destructive, handler: { [weak self] _ in
+              // Delete the suspect from Core Data
+              self?.deleteSuspectFromCoreData(at: indexPath.row)
+
+              // Remove the suspect from the arrays
+              self?.suspects.remove(at: indexPath.row)
+              self?.suspectsColors.remove(at: indexPath.row)
+
+              // Reload the collection view to reflect the changes
+              self?.mCollectionView.reloadData()
+          }))
+
+          present(confirmationAlert, animated: true, completion: nil)
+      }
     //life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        mCollectionView.reloadData()
+//        mCollectionView.reloadData()
 
         // Do any additional setup after loading the view.
         fetchSuspects()
@@ -77,5 +100,27 @@ class SuspectViewController: UIViewController ,UICollectionViewDataSource{
             print("suspect fetching error")
         }
     }
+    
+    
+    func deleteSuspectFromCoreData(at index: Int) {
+         let appDelegate = UIApplication.shared.delegate as! AppDelegate
+         let persistentContainer = appDelegate.persistentContainer
+         let managedContext = persistentContainer.viewContext
+
+         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Player")
+         request.predicate = NSPredicate(format: "name == %@", suspects[index])
+
+         do {
+             let result = try managedContext.fetch(request)
+             if let objectToDelete = result.first as? NSManagedObject {
+                 managedContext.delete(objectToDelete)
+
+                 // Save the changes
+                 try managedContext.save()
+             }
+         } catch {
+             print("Error deleting suspect from Core Data: \(error)")
+         }
+     }
 
 }
