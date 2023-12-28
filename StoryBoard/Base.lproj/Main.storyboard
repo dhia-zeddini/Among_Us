@@ -164,7 +164,7 @@
         <!--Game Room-->
         <scene sceneID="aoo-fd-syQ">
             <objects>
-                <viewController id="lh8-ku-jPz" sceneMemberID="viewController">
+                <viewController id="lh8-ku-jPz" customClass="HomeViewController" customModule="StoryBoard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UQJ-gN-fYr">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -227,9 +227,15 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Game Room" id="Mht-HP-1dK">
-                        <barButtonItem key="rightBarButtonItem" image="exclamationmark.circle.fill" catalog="system" id="yKr-7k-xzH"/>
+                        <barButtonItem key="rightBarButtonItem" image="exclamationmark.circle.fill" catalog="system" id="yKr-7k-xzH">
+                            <connections>
+                                <action selector="emergencyBtn:" destination="lh8-ku-jPz" id="IDO-ca-oCK"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="helloLabel" destination="WVj-yp-4aM" id="TKV-gM-nMM"/>
+                        <outlet property="playersTv" destination="Ebf-wO-mlR" id="xea-aW-pTN"/>
                         <segue destination="NwC-cN-1XM" kind="show" identifier="secondSegue" id="lUw-1u-elO"/>
                         <segue destination="HAf-Ui-lOp" kind="show" identifier="thirdSegue" id="yAo-kh-oNk"/>
                     </connections>
@@ -298,10 +304,10 @@
             </objects>
             <point key="canvasLocation" x="2862" y="735"/>
         </scene>
-        <!--View Controller-->
+        <!--Details View Controller-->
         <scene sceneID="KZz-0e-kM6">
             <objects>
-                <viewController id="NwC-cN-1XM" sceneMemberID="viewController">
+                <viewController id="NwC-cN-1XM" customClass="DetailsViewController" customModule="StoryBoard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fxa-0c-sk2">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
