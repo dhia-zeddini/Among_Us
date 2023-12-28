@@ -75,6 +75,8 @@ class HomeViewController: UIViewController ,UITableViewDelegate, UITableViewData
     
     
     @IBAction func emergencyBtn(_ sender: Any) {
+        
+        performSegue(withIdentifier: "thirdSegue", sender: sender)
     }
     
 }

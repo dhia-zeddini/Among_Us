@@ -67,6 +67,7 @@ class DetailsViewController: UIViewController {
         
         do{
             try managedContext.save()
+            self.showAlert(title: "Success", message: "Player is marked as suspect")
         }catch{
             print("suspect adding error")
         }
