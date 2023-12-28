@@ -335,12 +335,18 @@
                                     </backgroundConfiguration>
                                     <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="suspect:" destination="NwC-cN-1XM" eventType="touchUpInside" id="7bD-fg-uwR"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jEA-j9-nDn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="4aj-7g-Kna"/>
+                    <connections>
+                        <outlet property="playerAvatar" destination="1wS-R5-Gjj" id="51k-az-23X"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6T4-vh-ky7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
